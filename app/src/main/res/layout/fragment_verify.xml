@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#FFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_marginTop="24dp"
+                    android:layout_width="250dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/logo_main_one">
+
+                </ImageView>
+
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visitor Management System"
+                    android:textSize="22sp"
+                    android:textColor="#000">
+
+                </TextView>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:background="#000">
+
+                </View>
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:text="บันทึกการติดต่อ"
+                    android:textSize="22sp"
+                    android:background="#15909d"
+                    android:textColor="#FFF">
+
+                </Button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.56"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:weightSum="1">
+
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/border_login">
+
+                </ImageView>
+
+
+                <TextView
+                    android:layout_marginTop="48dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ไม่มีสิทธิ์บันทึกข้อมูล"
+                    android:textSize="24sp"
+                    android:textColor="#000">
+
+                </TextView>
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </FrameLayout>
+
+
+
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.14"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/border_cancel"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:text="ปิด"
+                            android:textSize="24sp"
+                            android:textColor="#000">
+
+                        </Button>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </FrameLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_blur_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CCFAFAFA"
+        android:gravity="center"
+        android:visibility="gone">
+
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminateTint="#BDBDBD"/>
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

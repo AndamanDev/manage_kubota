@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#FFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linear_data"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.86">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_marginTop="24dp"
+                    android:layout_width="250dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/logo_main_one">
+
+                </ImageView>
+
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visitor Management System"
+                    android:textSize="22sp"
+                    android:textColor="#000">
+
+                </TextView>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:background="#000">
+
+                </View>
+
+
+                <Button
+                    android:id="@+id/button_condition"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:text="บันทึกการติดต่อ"
+                    android:textSize="22sp"
+                    android:background="@drawable/border_green"
+                    android:textColor="#FFF">
+
+                </Button>
+
+
+                <TextView
+                    android:layout_marginTop="28dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:text="ยืนยันการบันทึกข้อมูล"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="28dp"
+                    android:textColor="#000">
+
+                </TextView>
+
+
+
+                <LinearLayout
+                    android:id="@+id/linear_emp"
+                    android:visibility="visible"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="32dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/border_black">
+
+
+                    <TextView
+                        android:id="@+id/text_view_emp_name"
+                        android:layout_marginTop="36dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ชื่อพนักงาน : [ชื่อพนักงาน]"
+                        android:textColor="#000">
+
+                    </TextView>
+
+
+                    <TextView
+                        android:id="@+id/text_view_emp_position"
+                        android:layout_marginTop="24dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="เเผนกบริษัท : [ชื่อเเผนก]"
+                        android:textColor="#000">
+
+                    </TextView>
+
+
+                    <TextView
+                        android:id="@+id/text_view_emp_division"
+                        android:layout_marginTop="24dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ส่วนงาน : [ชื่อส่วนงาน]"
+                        android:layout_marginBottom="36dp"
+                        android:textColor="#000">
+
+                    </TextView>
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_sec"
+                    android:visibility="gone"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="32dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/border_black">
+
+
+                    <TextView
+                        android:layout_marginTop="16dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000">
+
+                    </TextView>
+
+
+                    <TextView
+                        android:id="@+id/text_view_sec_name"
+                        android:layout_marginTop="24dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ชื่อพนักงาน : [ชื่อพนักงาน]"
+                        android:textColor="#000">
+
+                    </TextView>
+
+
+                    <TextView
+                        android:layout_marginTop="24dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="16dp"
+                        android:textColor="#000">
+
+                    </TextView>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </FrameLayout>
+
+
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.14"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top"
+                android:layout_gravity="top"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/button_back"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/border_cancel"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:text="ยกเลิก"
+                            android:textSize="20sp"
+                            android:textColor="#000">
+
+                        </Button>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/button_submit"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/border_next"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:text="ยืนยัน"
+                            android:textSize="20sp"
+                            android:textColor="#000">
+
+                        </Button>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+
+
+
+
+        </FrameLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_blur_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CCFAFAFA"
+        android:gravity="center"
+        android:visibility="gone">
+
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminateTint="#BDBDBD"/>
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

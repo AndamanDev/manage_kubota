@@ -1,0 +1,2 @@
+rootProject.name='kubota_manage_android'
+include ':app'

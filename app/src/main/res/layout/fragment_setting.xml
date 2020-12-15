@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_marginLeft="14dp"
+                    android:textColor="#000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="ซอฟเเวร์เวอร์ชัน">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+
+        </FrameLayout>
+
+
+
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical">
+
+                <TextView
+                    android:textColor="#000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_marginRight="12dp"
+                    android:text="V 1.0">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+
+        </FrameLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:weightSum="1"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <FrameLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="0.8">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:gravity="center_vertical">-->
+
+<!--                <TextView-->
+<!--                    android:layout_marginLeft="14dp"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:text="เเจ้งเตือน">-->
+
+<!--                </TextView>-->
+
+<!--            </LinearLayout>-->
+
+
+
+<!--        </FrameLayout>-->
+
+
+
+
+
+<!--        <FrameLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="0.2"-->
+<!--            >-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:gravity="right|center_vertical">-->
+
+<!--                <CheckBox-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_marginRight="12dp"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:text="OFF">-->
+
+<!--                </CheckBox>-->
+
+<!--            </LinearLayout>-->
+
+
+
+<!--        </FrameLayout>-->
+
+
+
+
+
+
+<!--    </LinearLayout>-->
+
+
+
+
+
+
+</LinearLayout>
