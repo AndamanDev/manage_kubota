@@ -7,6 +7,8 @@ class VisitorListDataResponse {
     var visit_tran_ids: Int? = 0
     @SerializedName("visitor_ids")
     var visitor_ids: Int? = 0
+    @SerializedName("visitor_type_id")
+    var visitor_type_id: Int? = 0
     @SerializedName("visitor_nm")
     var visitor_nm:  String? = ""
     @SerializedName("visitor_type_desc")

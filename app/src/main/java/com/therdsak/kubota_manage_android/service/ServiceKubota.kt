@@ -43,7 +43,7 @@ interface ServiceKubota {
     @GET("/v1/visitor/checking")
     fun callCheckvisit(@Header("Authorization") authorization : String,
                        @Query("visit_tran_ids") visit_tran_ids : String,
-                       @Query("em_id") em_id : String): Call<MessageResponse>
+                       @Query("em_rfid") em_id : String): Call<MessageResponse>
 //
 //    // in
     @POST("v1/visitor/update-visittarn")

@@ -36,9 +36,31 @@ class ItemPersonAdapter  (private val list :  List<VisitorListDataResponse>,
 
     class ViewHolder(itemsView: View) : RecyclerView.ViewHolder(itemsView) {
         @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
-        @SuppressLint("ResourceType", "SetTextI18n")
+        @SuppressLint("ResourceType", "SetTextI18n", "UseCompatLoadingForDrawables")
         fun bind(data : VisitorListDataResponse ,  clickListener: (data : VisitorListDataResponse) -> Unit ) {
             itemView.apply {
+
+                if (data.visitor_type_id == 1){
+                    linear_main.background = context.resources.getDrawable(R.drawable.border_green)
+                    text_view_name.setTextColor(context.resources.getColor(R.color.colorWhite))
+                    text_view_type.setTextColor(context.resources.getColor(R.color.colorWhite))
+                    text_view_company.setTextColor(context.resources.getColor(R.color.colorWhite))
+                    text_view_phone.setTextColor(context.resources.getColor(R.color.colorWhite))
+                    text_view_more.setTextColor(context.resources.getColor(R.color.colorWhite))
+                    text_view_name_name.setTextColor(context.resources.getColor(R.color.colorWhite))
+                    text_view_name_company.setTextColor(context.resources.getColor(R.color.colorWhite))
+                    text_view_name_phone.setTextColor(context.resources.getColor(R.color.colorWhite))
+                }else{
+                    linear_main.background = context.resources.getDrawable(R.drawable.border_white)
+                    text_view_name.setTextColor(context.resources.getColor(R.color.colorBlack))
+                    text_view_type.setTextColor(context.resources.getColor(R.color.colorBlack))
+                    text_view_company.setTextColor(context.resources.getColor(R.color.colorBlack))
+                    text_view_phone.setTextColor(context.resources.getColor(R.color.colorBlack))
+                    text_view_more.setTextColor(context.resources.getColor(R.color.colorBlack))
+                    text_view_name_name.setTextColor(context.resources.getColor(R.color.colorBlack))
+                    text_view_name_company.setTextColor(context.resources.getColor(R.color.colorBlack))
+                    text_view_name_phone.setTextColor(context.resources.getColor(R.color.colorBlack))
+                }
                 if (data.visitor_pic_online == ""){
                     linear_no_data.visibility = View.VISIBLE
                     image_view_visitor.visibility = View.GONE

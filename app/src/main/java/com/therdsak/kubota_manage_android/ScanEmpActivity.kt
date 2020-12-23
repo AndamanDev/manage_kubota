@@ -39,7 +39,12 @@ class ScanEmpActivity : AppCompatActivity() {
     var type: String? = ""
     var token: String? = ""
     var em_id: String? = ""
+    var position: String? = ""
+    var name: String? = ""
+    var type_data: String? = ""
+    var department: String? = ""
     var visit_tran_ids: Int? = 0
+
     var r : Ringtone? = null
     private var cardType = ByteArray(2) // 2 at least for M1 card
     private var serialNo = ByteArray(12) // 12 at least for M1 card
@@ -52,7 +57,10 @@ class ScanEmpActivity : AppCompatActivity() {
         type = intent.getStringExtra("type")
         token = intent.getStringExtra("token")
         em_id = intent.getStringExtra("em_id")
-        visit_tran_ids = intent.getIntExtra("visit_tran_ids",0)
+        position = intent.getStringExtra("position")
+        name = intent.getStringExtra("name")
+        type_data = intent.getStringExtra("type_data")
+        department = intent.getStringExtra("department")
         visit_tran_ids = intent.getIntExtra("visit_tran_ids",0)
 
 
@@ -162,6 +170,10 @@ class ScanEmpActivity : AppCompatActivity() {
         intent.putExtra("type",type)
         intent.putExtra("em_id",em_id)
         intent.putExtra("code",code)
+        intent.putExtra("position",position)
+        intent.putExtra("name",name)
+        intent.putExtra("type_data",type_data)
+        intent.putExtra("department",department)
         intent.putExtra("visit_tran_ids",visit_tran_ids)
         startActivity(intent)
         finish()

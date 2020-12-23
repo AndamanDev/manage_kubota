@@ -24,6 +24,10 @@ class InformActivity : AppCompatActivity() {
     var code: String? = ""
     var visit_tran_ids: Int? = 0
     var id_result : String? = ""
+    var position : String? = ""
+    var name : String? = ""
+    var type_data : String? = ""
+    var department : String? = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +38,10 @@ class InformActivity : AppCompatActivity() {
         token = intent.getStringExtra("token")
         code = intent.getStringExtra("code")
         em_id = intent.getStringExtra("em_id")
+        position = intent.getStringExtra("position")
+        name = intent.getStringExtra("name")
+        type_data = intent.getStringExtra("type_data")
+        department = intent.getStringExtra("department")
         visit_tran_ids = intent.getIntExtra("visit_tran_ids",0)
 
 
@@ -92,7 +100,7 @@ class InformActivity : AppCompatActivity() {
 
                         id_result = response.body()!!.data!!.em_id
                         button_submit.setOnClickListener {
-                            callCheck(token!!,visit_tran_ids.toString(), em_id!!)
+                            callCheck(token!!,visit_tran_ids.toString(), code)
                         }
 
 
@@ -124,7 +132,7 @@ class InformActivity : AppCompatActivity() {
 
                     id_result = response.body()!!.data!!.sec_rfid_id
                     button_submit.setOnClickListener {
-                        callCheck(token!!,visit_tran_ids.toString(), em_id!!)
+                        callCheck(token!!,visit_tran_ids.toString(), code)
                     }
                 }else{
                 }
@@ -224,10 +232,14 @@ class InformActivity : AppCompatActivity() {
 
 
     fun openVerify(type : String , message : String , token : String  ){
-        val intent = Intent(this, VerifyActivity::class.java)
+        val intent = Intent(this, VerifyEmpActivity::class.java)
         intent.putExtra("type",type)
         intent.putExtra("message",message)
         intent.putExtra("token",token)
+        intent.putExtra("position",position)
+        intent.putExtra("name",name)
+        intent.putExtra("type_data",type_data)
+        intent.putExtra("department",department)
         startActivity(intent)
     }
 

@@ -40,19 +40,22 @@ class MainActivity  : AppCompatActivity(), NavigationView.OnNavigationItemSelect
 
         navigation_view.setNavigationItemSelectedListener(this)
 
-        if (type == ""){
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFragment.newInstance())
-                .commit()
-        }else if (type == "in"){
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container, ScanFragment.newInstance("in"))
-                .commit()
-        }else{
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container, ScanFragment.newInstance("out"))
-                .commit()
-        }
+
+
+
+//        if (type == ""){
+//            supportFragmentManager.beginTransaction()
+//                .replace(R.id.container, MainFragment.newInstance())
+//                .commit()
+//        }else if (type == "in"){
+//            supportFragmentManager.beginTransaction()
+//                .replace(R.id.container, ScanFragment.newInstance("in"))
+//                .commit()
+//        }else{
+//            supportFragmentManager.beginTransaction()
+//                .replace(R.id.container, ScanFragment.newInstance("out"))
+//                .commit()
+//        }
 
        // displayScreen(-1)
     }
@@ -66,6 +69,9 @@ class MainActivity  : AppCompatActivity(), NavigationView.OnNavigationItemSelect
             object : ISdkStatue {
                 override fun sdkInitSuccessed() {
                     Log.d("!!!", "sdkInitSuccess")
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, ScanFragment.newInstance("in"))
+                        .commit()
                 }
 
                 override fun sdkInitFailed() {
@@ -100,26 +106,26 @@ class MainActivity  : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         // val fragment =  when (id){
 
         when (id){
-            R.id.nav_check_in -> {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, ScanFragment.newInstance("in"))
-                    .commit()
-              //  supportFragmentManager.beginTransaction().replace(R.id.relativelayout, HomeFragment()).commit()
-            }
-
-            R.id.nav_check_out -> {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, ScanFragment.newInstance("out"))
-                    .commit()
-                //supportFragmentManager.beginTransaction().replace(R.id.relativelayout, PhotosFragment()).commit()
-            }
-
-            R.id.nav_setting -> {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, SettingFragment.newInstance())
-                    .commit()
-               // supportFragmentManager.beginTransaction().replace(R.id.relativelayout, MoviesFragment()).commit()
-            }
+//            R.id.nav_check_in -> {
+//                supportFragmentManager.beginTransaction()
+//                    .replace(R.id.container, ScanFragment.newInstance("in"))
+//                    .commit()
+//              //  supportFragmentManager.beginTransaction().replace(R.id.relativelayout, HomeFragment()).commit()
+//            }
+//
+//            R.id.nav_check_out -> {
+//                supportFragmentManager.beginTransaction()
+//                    .replace(R.id.container, ScanFragment.newInstance("out"))
+//                    .commit()
+//                //supportFragmentManager.beginTransaction().replace(R.id.relativelayout, PhotosFragment()).commit()
+//            }
+//
+//            R.id.nav_setting -> {
+//                supportFragmentManager.beginTransaction()
+//                    .replace(R.id.container, SettingFragment.newInstance())
+//                    .commit()
+//               // supportFragmentManager.beginTransaction().replace(R.id.relativelayout, MoviesFragment()).commit()
+//            }
 
             R.id.nav_logout -> {
                 onSignOut()

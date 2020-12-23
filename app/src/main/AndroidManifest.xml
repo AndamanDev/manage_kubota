@@ -79,6 +79,23 @@
             tools:ignore="LockedOrientationActivity">
 
         </activity>
+
+
+        <activity android:name=".DataCompleteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            tools:ignore="LockedOrientationActivity">
+
+        </activity>
+
+
+
+        <activity android:name=".VerifyEmpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            tools:ignore="LockedOrientationActivity">
+
+        </activity>
     </application>
 
 </manifest>

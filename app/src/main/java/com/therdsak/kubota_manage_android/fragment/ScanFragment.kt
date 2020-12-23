@@ -53,7 +53,7 @@ class ScanFragment : Fragment() {
         value = arguments?.getString("value")!!
        // readCardHandler = ReadCardHandler()
 
-
+        piccOpenStatus = PiccApi.PiccOpen_Api()
 
 
 
@@ -76,7 +76,7 @@ class ScanFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        piccOpenStatus = PiccApi.PiccOpen_Api()
+
         Log.d("!!!","hello 1 : " + piccOpenStatus)
 
 

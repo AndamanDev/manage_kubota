@@ -7,6 +7,7 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:id="@+id/linear_main"
         android:visibility="visible"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
@@ -28,7 +29,8 @@
                 android:layout_width="90dp"
                 android:layout_height="90dp"
                 android:layout_gravity="center"
-                android:background="@drawable/border_login">
+                android:background="@drawable/border_login"
+                android:orientation="horizontal">
 
             </LinearLayout>
 
@@ -68,6 +70,7 @@
                 </TextView>
 
                         <TextView
+                            android:id="@+id/text_view_name_name"
                             android:layout_marginTop="12dp"
                             android:layout_gravity="left"
                             android:layout_marginLeft="12dp"
@@ -92,6 +95,7 @@
 
 
                         <TextView
+                            android:id="@+id/text_view_name_company"
                             android:layout_marginTop="12dp"
                             android:layout_gravity="left"
                             android:layout_marginLeft="12dp"
@@ -119,6 +123,7 @@
 
 
                         <TextView
+                            android:id="@+id/text_view_name_phone"
                             android:layout_marginTop="12dp"
                             android:layout_gravity="left"
                             android:layout_marginLeft="12dp"
