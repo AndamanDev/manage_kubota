@@ -70,33 +70,6 @@ class ContactActivity : AppCompatActivity() {
                           text_view_name.text = "ชื่อพนักงาน : " + response.body()?.data!!.em_nm
                           text_view_type.text = "ประเภทการติดต่อ : " + response.body()?.data!!.visit_type_desc
                           setRecyclerView(response.body()?.data!!.visitors!!)
-//                          var name = ""
-//                          var position = ""
-//                          var visit_type_desc = ""
-//                          var workunit_desc = ""
-//                          if (response.body()?.data!!.em_nm == null){
-//                              name = ""
-//                          }else{
-//                              name = response.body()?.data!!.em_nm
-//                          }
-//
-//                          if (response.body()?.data!!.position == null){
-//                              position = ""
-//                          }else{
-//                              position = response.body()?.data!!.position
-//                          }
-//
-//                          if (response.body()?.data!!.visit_type_desc == null){
-//                              visit_type_desc = ""
-//                          }else{
-//                              visit_type_desc = response.body()?.data!!.visit_type_desc
-//                          }
-//
-//                          if (response.body()?.data!!.workunit_desc == null){
-//                              workunit_desc = ""
-//                          }else{
-//                              workunit_desc = response.body()?.data!!.workunit_desc
-//                          }
                           openScan(response.body()?.data!!.visit_tran_ids!! ,response.body()?.data!!.em_id,
                               response.body()?.data!!.position,
                               response.body()?.data!!.em_nm,
