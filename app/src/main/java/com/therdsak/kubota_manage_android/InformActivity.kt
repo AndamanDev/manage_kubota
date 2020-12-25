@@ -94,17 +94,14 @@ class InformActivity : AppCompatActivity() {
             override fun onResponse(call: Call<EmpResponse>, response: Response<EmpResponse>) {
                 Log.d("!!!","come in emp  : " + response.body()?.message)
              //
-                linear_data.visibility = View.VISIBLE
+            //    linear_data.visibility = View.VISIBLE
                 if (response.body()?.message.equals("ok")){
                         text_view_emp_name.text = "ชื่อพนักงาน : " + response.body()!!.data!!.em_nm
                         text_view_emp_position.text = "เเผนกบริษัท : " + response.body()!!.data!!.department_desc
                         text_view_emp_division.text = "ส่วนงาน : " + response.body()!!.data!!.division_desc
 
                         id_result = response.body()!!.data!!.em_id
-                        button_submit.setOnClickListener {
-                            callCheck(token!!,visit_tran_ids.toString(), code)
-                        }
-
+                        callCheck(token!!,visit_tran_ids.toString(), code)
                 }else{
                     openVerify(type!!  , "ไม่ผ่าน" ,authorization )
                 }
@@ -156,14 +153,18 @@ class InformActivity : AppCompatActivity() {
                 Log.d("!!!","come in emp  : " + response.body()?.data)
 
                 if (response.body()?.message.equals("ok")){
-
+                    linear_data.visibility = View.VISIBLE
                     if (response.body()?.data!!.message == "ผ่าน"){
                         if (type == "in"){
-                            callUpdateVisitTran(authorization ,visit_tran_ids , id_result!!)
+                            button_submit.setOnClickListener {
+                                callUpdateVisitTran(authorization ,visit_tran_ids , id_result!!)
+                            }
+
                         }else {
                           //  callUpdateVisitOut(authorization, visit_tran_ids, id_result!!)
                         }
                     }else{
+                        linear_data.visibility = View.GONE
                         openVerify(type!!  , "ไม่ผ่าน" ,authorization )
                     }
 
