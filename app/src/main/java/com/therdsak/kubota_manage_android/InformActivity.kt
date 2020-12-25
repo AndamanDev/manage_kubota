@@ -108,11 +108,13 @@ class InformActivity : AppCompatActivity() {
 
 
                 }else{
+                    openVerify(type!!  , "ไม่ผ่าน" ,authorization )
                 }
             }
 
             override fun onFailure(call: Call<EmpResponse>, t: Throwable) {
-                openVerify(type!!  , "ไม่พบข้อมูล" ,authorization )
+                openVerify(type!!  , "ไม่ผ่าน" ,authorization )
+               // openVerify(type!!  , "ไม่พบข้อมูล" ,authorization )
             }
         })
 
