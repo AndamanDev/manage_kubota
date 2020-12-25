@@ -89,7 +89,7 @@ class InformActivity : AppCompatActivity() {
             @SuppressLint("SetTextI18n")
             override fun onResponse(call: Call<EmpResponse>, response: Response<EmpResponse>) {
                 Log.d("!!!","come in emp  : " + response.body()?.message)
-                linear_data.visibility = View.VISIBLE
+             //
                 if (response.body()?.message.equals("ok")){
 
 
@@ -126,7 +126,7 @@ class InformActivity : AppCompatActivity() {
         callService?.enqueue(object : Callback<SecResponse> {
             @SuppressLint("SetTextI18n")
             override fun onResponse(call: Call<SecResponse>, response: Response<SecResponse>) {
-                linear_data.visibility = View.VISIBLE
+             //   linear_data.visibility = View.VISIBLE
                 if (response.body()?.message.equals("ok")){
                     text_view_sec_name.text = "ชื่อพนักงาน : " + response.body()!!.data!!.sec_nm
 
@@ -154,6 +154,7 @@ class InformActivity : AppCompatActivity() {
             @SuppressLint("SetTextI18n")
             override fun onResponse(call: Call<MessageResponse>, response: Response<MessageResponse>) {
                 Log.d("!!!","come in emp  : " + response.body()?.data)
+                linear_data.visibility = View.VISIBLE
                 if (response.body()?.message.equals("ok")){
 
                     if (response.body()?.data!!.message == "ผ่าน"){
@@ -173,7 +174,9 @@ class InformActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<MessageResponse>, t: Throwable) {
-                Log.d("!!!","t : " + t.message)
+             //   Log.d("!!!","t : " + t.message)
+                linear_data.visibility = View.GONE
+                openVerify(type!!  , "ไม่ผ่าน" ,authorization )
             }
         })
 
@@ -193,7 +196,7 @@ class InformActivity : AppCompatActivity() {
                 Log.d("!!!","come in emp  : " + response.body()?.data)
                 if (response.body()?.message.equals("ok")){
 
-                    openVerify(type!!  , "ผ่าน",authorization)
+                    openVerifySuccess(type!!  , "ผ่าน",authorization)
 
                 }else{
                 }
@@ -215,9 +218,7 @@ class InformActivity : AppCompatActivity() {
             override fun onResponse(call: Call<MessageResponse>, response: Response<MessageResponse>) {
                 Log.d("!!!","come in emp  : " + response.body()?.data)
                 if (response.body()?.message.equals("ok")){
-
-                    openVerify(type!!  , "ผ่าน",authorization)
-
+                    openVerifySuccess(type!!  , "ผ่าน",authorization)
                 }else{
                 }
             }
@@ -228,6 +229,16 @@ class InformActivity : AppCompatActivity() {
         })
 
 
+    }
+
+
+
+    fun openVerifySuccess(type : String , message : String , token : String  ){
+        val intent = Intent(this, VerifyActivity::class.java)
+        intent.putExtra("type",type)
+        intent.putExtra("message",message)
+        intent.putExtra("token",token)
+        startActivity(intent)
     }
 
 
