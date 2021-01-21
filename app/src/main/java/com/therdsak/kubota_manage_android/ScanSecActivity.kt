@@ -137,16 +137,6 @@ class ScanSecActivity : AppCompatActivity() {
                             .substring(2, 10))
                     }
 
-                //            val intent = Intent(this, InformActivity::class.java)
-//            startActivity(intent)
-//                    listener.onCheckIn(
-//                        CommonConvert.bcdToASCString(serialNo)
-//                        .substring(2, 10))
-
-
-
-//                    Log.d("!!!","serial no : " + CommonConvert.bcdToASCString(serialNo)
-//                    .substring(2, 10))
 
 
 

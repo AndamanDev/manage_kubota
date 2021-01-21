@@ -26,11 +26,6 @@ class VerifyEmpActivity : AppCompatActivity() {
         department = intent.getStringExtra("department")
 
 
-        Log.d("!!!","position" + position)
-        Log.d("!!!","type_data" + type_data)
-        Log.d("!!!","department" + department)
-        Log.d("!!!","name" + name)
-
 
 
         text_view_status.text = "[" + type_data +  "]"

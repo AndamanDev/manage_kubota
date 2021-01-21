@@ -9,6 +9,7 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
+import com.therdsak.kubota_manage_android.controller.KubotaPreference
 import com.therdsak.kubota_manage_android.model.LoginResponse
 import com.therdsak.kubota_manage_android.service.ServiceCreate
 import kotlinx.android.synthetic.main.activity_login.*
@@ -20,7 +21,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class LoginActivity  : AppCompatActivity() {
-
+    var kubotaPreference: KubotaPreference? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -28,6 +29,9 @@ class LoginActivity  : AppCompatActivity() {
         if (ServiceCreate.serviceKubota == null) {
             ServiceCreate.createKubotaService()
         }
+
+
+        kubotaPreference = KubotaPreference(this)
 
         button_sign_in.setOnClickListener {
             if (edit_text_username.text.toString().isEmpty()){
@@ -70,6 +74,8 @@ class LoginActivity  : AppCompatActivity() {
 //                linear_blur.visibility = View.GONE
                 if (response.body()?.message.equals("ok")){
                     openMain(response.body()?.data?.access_token!!)
+                    kubotaPreference?.saveEmail("email",edit_text_username.text.toString())
+                    kubotaPreference?.savePassword("password",edit_text_password.text.toString())
                 }else{
 //                    if (netsumanPreference?.getLang("ln").equals("th")){
 //                        showDialog("เเจ้งปัญหา","ไม่มีผู้ใช้งานในระบบ")

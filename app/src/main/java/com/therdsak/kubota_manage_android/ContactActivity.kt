@@ -66,8 +66,21 @@ class ContactActivity : AppCompatActivity() {
                 if (response.body()?.message.equals("ok")){
 
                       if (response.body()?.data!!.visit_tran_status_id == 1){
-                          text_view_position.text = "ส่วนงาน : " + response.body()?.data!!.position
-                          text_view_name.text = "ชื่อพนักงาน : " + response.body()?.data!!.em_nm
+                          if (response.body()?.data!!.position == null){
+                              text_view_position.visibility = View.GONE
+                          }else{
+                              text_view_position.visibility = View.VISIBLE
+                              text_view_position.text = "ส่วนงาน : " + response.body()?.data!!.position
+                          }
+
+                          if (response.body()?.data!!.em_nm == null){
+                              text_view_name.visibility = View.GONE
+                          }else{
+                              text_view_name.visibility = View.VISIBLE
+                              text_view_name.text = "ชื่อพนักงาน : " + response.body()?.data!!.em_nm
+                          }
+
+
                           text_view_type.text = "ประเภทการติดต่อ : " + response.body()?.data!!.visit_type_desc
                           setRecyclerView(response.body()?.data!!.visitors!!)
                           openScan(response.body()?.data!!.visit_tran_ids!! ,response.body()?.data!!.em_id,
@@ -76,6 +89,8 @@ class ContactActivity : AppCompatActivity() {
                               response.body()?.data!!.visit_type_desc,
                               response.body()?.data!!.workunit_desc)
                       }else{
+                          text_view_position.visibility = View.GONE
+                          text_view_name.visibility = View.GONE
                           openDetail("",token!! , response.body()?.data!!.em_nm!!,
                               response.body()?.data!!.workunit_desc!!,
                               response.body()?.data!!.position!! ,
